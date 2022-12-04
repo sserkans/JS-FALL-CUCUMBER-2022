@@ -41,7 +41,7 @@ When(/^I type '(.*)' as (.*)$/, async function (data, field) {
 
 When(/^I click login button$/, async function(){
     await loginPage.clickLoginInButton();
-    await browser.pause(1000);
+    await browser.pause(5000);
 });
 
 When(/^I verify error is displayed$/, async function () {
