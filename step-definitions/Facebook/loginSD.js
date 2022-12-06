@@ -44,7 +44,7 @@ Given(/^I am on (facebook|hotels|darksky|yahoo|amazon)$/, async function (){
    // await browser.pause(1000);
 //});
 
-When(/^I type '(.*)' as (username|password)$/, async function (data, field) {
+When(/^I type '(.+)' as (username|password)$/, async function (data, field) {
     switch (field.toLowerCase()) {
         case 'username':
             await loginPage.enterLoginEmail(data);
