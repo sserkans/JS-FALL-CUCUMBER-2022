@@ -11,7 +11,7 @@ const loginErrorPage = new LoginErrorPage();
  * Glue code is a regular expression which helps to map Scenario-steps with functions (step-definitions)
  */
 
-Given(/^I am on (facebook|hotels|darksky|yahoo|amazon)$/, async function (){
+ Given(/^I am on (facebook|hotels|darksky|yahoo|amazon)$/, async function (urlName) {
     switch (urlName.toLowerCase()) {
         case 'facebook':
             await browser.url('/');
@@ -31,7 +31,6 @@ Given(/^I am on (facebook|hotels|darksky|yahoo|amazon)$/, async function (){
         default:
             break;
     }
-    
 });
 
 //When(/^I type '(.*)' as username$/, async function(username){
@@ -57,14 +56,12 @@ When(/^I type '(.+)' as (username|password)$/, async function (data, field) {
     }
 });
 
-When(/^I click login button$/, async function(){
+When(/^I click login button$/, async function () {
     await loginPage.clickLoginInButton();
-    await browser.pause(5000);
-});
+})
 
 When(/^I verify error is displayed$/, async function () {
     expect(await loginErrorPage.isLoginErrorDisplayed(), 'Login error is not displayed').to.be.true;
-    await browser.pause(1000);
 });
 
 When(/^I verify login (.*) is enabled$/, async function (field) {
