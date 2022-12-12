@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 12 13:53:48 EST 2022","Mon Dec 12 13:53:51 EST 2022","3526","","Sign Up","","Sign Up","Verify current date is displayed on Sign-Up form","Verify current date is displayed on Sign-Up form",""
+"failed","Mon Dec 12 17:34:55 EST 2022","Mon Dec 12 17:34:59 EST 2022","4267","","Login","","Login","Verify error for invalid password","Verify error for invalid password",""
+"passed","Mon Dec 12 17:34:51 EST 2022","Mon Dec 12 17:34:55 EST 2022","3786","","Login","","Login","Verify error for invalid login","Verify error for invalid login",""
+"passed","Mon Dec 12 13:53:57 EST 2022","Mon Dec 12 13:53:58 EST 2022","1064","","Login","","Login","Verify error for empty login flow","Verify error for empty login flow",""
