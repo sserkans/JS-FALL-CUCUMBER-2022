@@ -5,6 +5,8 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+    user: 'serkansonmez_JQYHFt',
+    key:'ZysraNb9xMc9q8i2eqwP',
     
     //
     // ==================
@@ -52,18 +54,34 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
+        maxInstances:5,
+        browserName: 'Chrome',
+        'bstack:options': {
+            os: 'Windows',
+            osVersion: '11',
+            browserVersion: '107.0'
+            },
         acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
+      },
+      {
+        maxInstances:5,
+        browserName: 'Firefox',
+        'bstack:options': {
+            os: 'Windows',
+            osVersion: '10',
+            browserVersion: '106.0'
+            },
+        acceptInsecureCerts: true
+      },
+      {
+        maxInstances:5,
+        browserName: 'Chrome',
+        'bstack:options': {
+            os: 'OS X',
+            osVersion: 'Ventura',
+            browserVersion: '107.0'
+            },
+        acceptInsecureCerts: true   
     }],
     //
     // ===================
@@ -112,7 +130,11 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services: [['browserstack', {
+        preferScenarioName: true
+        }]
+    ],
+
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -134,12 +156,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', 
+    reporters:[['allure', 
         {
-            outputDir: './report/allure-results',
-            disableWebdriverStepsReporting: true,
-            useCucumberStepReporter: true,
-            disableWebdriverScreenshotsReporting: false,
+        outputDir: './report/allure-results',
+        disableWebdriverStepsReporting: true,
+        useCucumberStepReporter: true,
+        disableWebdriverScreenshotsReporting: false,
         }
     ]],
 

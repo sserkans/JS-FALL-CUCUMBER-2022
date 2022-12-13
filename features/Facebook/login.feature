@@ -62,7 +62,7 @@
             | Meta Pay  |
             | Portal    |
 
-    @login-3
+    @login-3 @imp
     Scenario: Verify error for empty login flow
         And I verify login email is enabled
         And I verify login password is enabled
