@@ -83,7 +83,7 @@ ALLURE REPORT:
 
     To generate Allure report:
         allure generate --clean <allure-results-path>
-        eg: allure generate --clean ./reports/allure-results/
+        eg: allure generate --clean ./report/allure-results/
 
     To open allure report:
         allure open
