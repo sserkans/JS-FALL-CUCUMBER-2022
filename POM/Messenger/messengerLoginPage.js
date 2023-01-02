@@ -1,31 +1,31 @@
-const Commands = require("../Commands");
+// const Commands = require("../Commands");
 
 
-class MessengerLoginPage {
+// class MessengerLoginPage {
 
-    commands = new Commands();
+//     commands = new Commands();
 
-    //Locators
+//     //Locators
 
-    messengerLinkLocator = '=Messenger';
+//     messengerLinkLocator = '=Messenger';
 
-    loginButtonLocator = '#loginbutton';
+//     loginButtonLocator = '#loginbutton';
 
-    errorLink = '=Find your account and log in.'
+//     errorLink = '=Find your account and log in.'
 
-    // functions
+//     // functions
 
-    async clickMessenger() {
-        await this.commands.clickWebElement(this.messengerLinkLocator);
-    }
+//     async clickMessenger() {
+//         await this.commands.clickWebElement(this.messengerLinkLocator);
+//     }
 
-    async clickLogin() {
-        await this.commands.clickWebElement(this.loginButtonLocator);
-    }
+//     async clickLogin() {
+//         await this.commands.clickWebElement(this.loginButtonLocator);
+//     }
 
-    async isErrorLinkDisplayed () {
-       return await $(this.errorLink).isDisplayed();
-    }
+//     async isErrorLinkDisplayed () {
+//        return await $(this.errorLink).isDisplayed();
+//     }
 
-}
-module.exports = MessengerLoginPage;
+// }
+// module.exports = MessengerLoginPage;
