@@ -17,6 +17,16 @@ class Dates {
         return now.format('YYYY');
     }
 
+    format_MM$DD$YY(time) {
+        time = moment(time);
+        return time.format('MM/DD/YY');
+    }
+
+    format_DD_MMMMc_YYYY(time) {
+        time = moment(time);
+        return time.format('DD MMMM, YYYY');
+    }
+
 
 }
 module.exports = Dates;
